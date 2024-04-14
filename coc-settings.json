@@ -1,0 +1,5 @@
+{
+    "suggest.enablePreview": false,
+    "signature.enable": false,
+    "inlayHint.enable": false
+}
