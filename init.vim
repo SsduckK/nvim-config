@@ -26,6 +26,18 @@ nnoremap <silent> <space><CR> :Telescope buffers<CR>
 
 colorscheme tokyonight
 
+lua << EOF
+require('telescope').setup {
+    defaults = {
+        file_ignore_patterns = {
+            "build/", ".git/", ".cache", "%.o", "%.a", "%.out", "%.class",
+            "%.pdf", "%.mkv", "%.mp4", "%.zip"
+        }
+    }
+}
+EOF
+
+
 syntax enable
 let g:rainbow_active = 1
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
